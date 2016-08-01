@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TITLE</title>
+  
+  <script src="script.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	var num=""
+	var size="50"
+	for (var i = 1; i <= size; i++) {
+		num = num + i
+		console.log(num);
+		
+
+	}
+	var a = ""
+	for(var y = 0; y < 26; y++){
+		a = a + String.fromCharCode(65 + y)
+		
+	}
+	for(var z = 0; z < a.length; z++){
+		console.log(a.slice(0, z + 1))
+	}
+
+	var b = ""
+	var hash = "6"
+	for(var u = 1; u < hash; u++){
+		b = b + String.fromCharCode(35)
+	}
+	for (var o = 0; o < b.length; o++) {
+		 console.log(b.slice(0, o + 1))
+	}
+	
+
+	function Game() {
+		for(var f = 1; f <= 100; f++) {
+			if ( f % 5 == 0 && f % 7 == 0) {
+				console.log("FizzBuzz")
+			} else if ( f % 5 == 0) {
+				console.log("Buzz")
+			} else if ( f % 7 == 0) {
+				console.log("Fizz")
+			}	else { console.log(f)
+		}
+	}
+}
+	Game()
+
+	
+</script>
+</body>
+</html>

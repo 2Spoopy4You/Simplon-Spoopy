@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TITLE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+Devine: <input type='text' id='guess'>
+<button id="checkBtn">Check</button>
+<!--<iframe width="1" height="1" src="https://www.youtube.com/embed/HZ5r5L2OFzc?autoplay=1" frameborder="0" allowfullscreen></iframe>-->
+
+
+
+<script>
+	
+var rannum = Math.floor((Math.random() * 100) + 1);
+var counter = 0; 
+var max = 100; 
+var guess = 0;
+
+document.getElementById('checkBtn').onclick = function (){
+    var guess = document.getElementById('guess').value;
+    checkGuess(guess);
+    counter++;
+    
+    if(counter == max) {
+        alert("La honte tu as perdu !");
+        document.getElementById("checkBtn").disabled = true;
+    }	
+}
+
+function checkGuess(guess){
+    if (guess == rannum){ 
+        alert("Tu as gagné bravo!");
+        document.getElementById("checkBtn").disabled = true;
+    }
+    if (guess > rannum){ 
+        alert("Trop haut!");
+        document.getElementById("guess").value='';
+    }
+
+    else if (guess < rannum){ 
+    alert("Trop bas!");
+         document.getElementById("guess").value='';
+     }
+}
+
+
+</script>
+</body>
+</html>
